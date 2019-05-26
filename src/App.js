@@ -24,8 +24,8 @@ class App extends Component {
             color: white;
           `}
         >
-          Toggling the state to dynamically set stying on a button using styled
-          components macros.
+          Toggling the state to dynamically set styling on the second button
+          using styled components macros.
         </div>
         <div>
           <Button
