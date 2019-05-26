@@ -8,8 +8,15 @@ const Button = props => {
       css={
         secondary &&
         `
-          color: papayawhip;
-          background: palevioletred;
+          background-color: #6C757D;
+          border-color: #6C757D;
+          color: white;
+
+          &:hover {
+            background-color: #5A6268;
+            border-color: #545B62;
+
+          }
         `
       }
       onClick={onClickHandler}

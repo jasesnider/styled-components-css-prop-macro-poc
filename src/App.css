@@ -31,3 +31,9 @@
     transform: rotate(360deg);
   }
 }
+
+button {
+  padding: 1rem 2rem;
+  margin: 1rem auto;
+  cursor: pointer;
+}
