@@ -9,7 +9,9 @@ class App extends Component {
   };
 
   toggleSecondButton = () => {
-    this.setState({ secondary: !this.state.secondary });
+    this.setState(prevState => ({
+      secondary: !prevState.secondary
+    }));
   };
 
   render() {
