@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import "styled-components/macro";
+import Button from "./Button";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+class App extends Component {
+  state = {
+    secondary: false
+  };
+
+  toggleSecondButton = () => {
+    this.setState({ secondary: !this.state.secondary });
+  };
+
+  render() {
+    const { secondary } = this.state;
+
+    return (
+      <div className="App">
+        <header className="App-header" />
+        <div
+          css={`
+            background: grey;
+            color: white;
+          `}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          Toggling the state to dynamically set stying on a button using styled
+          components macros.
+        </div>
+        <div>
+          <Button
+            label="Toggle Second Button Styles"
+            onClickHandler={this.toggleSecondButton}
+          />
+        </div>
+        <div>
+          <Button secondary={secondary} label="I'm changing!" />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
